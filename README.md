@@ -1,7 +1,7 @@
 one-touch-devenv-start
 =====================
 
-Do you want to start and manage your development environment with a single touch? Give this starter a try. It assumes you'll be using gulp, mongodb, and a few other choice pieces of development equipment.But that can be easily configired -- this is a fairly empty starter. It should get you on your way to building out a larger system.
+Do you want to start and manage your development environment with a single touch? Give this starter a try. It assumes you'll be using gulp, mongodb, and a few other choice pieces of development equipment.But that can be easily configired -- this is a fairly empty starter. It should get you on your way to building out a larger system that will amaze your coworkers.
 
 forks
 ==============
