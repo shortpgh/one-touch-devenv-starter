@@ -1,0 +1,67 @@
+Exec {
+  path => ['/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/local/bin']
+}
+
+# Lets tell Puppet the order of our stages
+stage { 
+  'users':      before => Stage['repos'];
+  'repos':      before => Stage['updates'];
+  'updates':    before => Stage['packages'];
+  'packages':   before => Stage['configure'];
+  'configure':  before => Stage['services'];
+  'services':   before => Stage['main'];
+}
+
+class services {
+  #service { 
+    #'mongodb':
+      #ensure => running,
+      #enable => true
+  #}
+}
+ 
+class configure {
+  #add any custom stuff here please
+}
+
+class updates {
+  # We must run apt-get update before we install our packaged because we installed some repo's
+  exec { "apt-update":
+    command => "/usr/bin/apt-get update -y -q",
+    timeout => 0
+  }
+}
+
+class repos {
+  #lets install some repos
+}
+ 
+class users
+{
+  group { "puppet":
+    ensure => "present",
+  }
+}
+
+class packages {
+  #package {
+    #['curl', 'build-essential', 'libfontconfig1', 'python',
+             #'g++', 'make', 'tar', 'mc', 'htop']: ensure => present;
+  #}
+#
+}
+
+class { 'nodejs':
+  version    => 'v0.10.28',
+  stage      => "packages",
+}
+
+class { 
+  users:      stage => "users";
+  repos:      stage => "repos";
+  updates:    stage => "updates";
+  packages:   stage => "packages";
+  configure:  stage => "configure";
+  services:   stage => "services";
+}
+
