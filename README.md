@@ -11,4 +11,4 @@ forks
 a note on forks
 ==============
 
-If you fork this project to build a starter for a specific project, please send it back by adding it to the forks list above. That will help promote any travellers to this page to all of the available forks.
+If you fork this project to build a starter for a specific language/stack/whatever, please send it back by adding it to the forks list above. That will help promote any travellers to this page to all of the available forks.
