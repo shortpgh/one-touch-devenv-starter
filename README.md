@@ -7,8 +7,8 @@ installation
 ===============
 Install the following tools get get this system setup.
 
-* [vagrant](http://docs.vagrantup.com/)
-* [virtual box](https://www.virtualbox.org/)
+* [vVagrant](http://docs.vagrantup.com/)
+* [VirtualBox](https://www.virtualbox.org/)
 
 download a box
 ================
