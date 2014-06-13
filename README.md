@@ -12,10 +12,8 @@ Install the following tools get get this system setup.
 
 download a box
 ================
-Use these commands to install the box that matches the config, or download your own box and update the config.
+The Vagrantfile includes the box that this was tested with. Type the command below to start it.
 
-  $ vagrant box add ubuntu http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box
-  $ vagrant init ubuntu
   $ vagrant up
 
 forks
